@@ -43,8 +43,16 @@ const handleNext = () => {
   return (
     <div>
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
-      <button onClick={handleLast}>précédent</button>
-      <button onClick={handleNext}>suivant</button>
+
+      {/* Displays the "previous" button only if pokemonIndex > 0 */}
+      {pokemonIndex > 0 && (
+        <button onClick={handleLast}>Précédent</button>
+      )}
+
+      {/* Displays the "next" button only if pokemonIndex < pokemonList.length - 1 */}
+      {pokemonIndex < pokemonList.length - 1 && (
+        <button onClick={handleNext}>Suivant</button>
+      )}
     </div>
 
   )
