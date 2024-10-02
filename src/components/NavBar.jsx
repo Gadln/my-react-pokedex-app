@@ -8,7 +8,6 @@ function NavBar({ pokemonList, setPokemonIndex }) {
             onClick={() => setPokemonIndex(index)}>
             {pokemon.name}
           </button>
-        
         ))}
       </ul>
     </div>

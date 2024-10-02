@@ -1,5 +1,13 @@
+import { useEffect } from "react";
+
 function PokemonCard({ pokemon }) {
   //console.log(pokemon);
+
+useEffect(() => {
+  if (pokemon.name === "pikachu") {
+    alert("pika pikachu !!!");
+  }
+}, [pokemon])
 
   return <figure>
     {pokemon.imgSrc ? (
